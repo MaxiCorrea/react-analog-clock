@@ -1,5 +1,6 @@
 import * as React from "react";
+import { ClockPage } from "../pages/ClockPage";
 
 export const Application: React.FC = () => {
-  return <div>React Analog Clock!</div>;
+  return <ClockPage />;
 };

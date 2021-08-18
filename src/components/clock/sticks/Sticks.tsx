@@ -20,3 +20,8 @@ export const StickNine: React.FC = () => {
   const classes = useSticksStyles();
   return <span className={classes.nine}></span>;
 };
+
+export const Axis: React.FC = () => {
+  const classes = useSticksStyles();
+  return <span className={classes.axis}></span>;
+};

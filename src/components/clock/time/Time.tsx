@@ -1,17 +1,36 @@
 import * as React from "react";
 import { useTimeStyles } from "./Time.style";
 
-export const Hours: React.FC = () => {
+interface Props {
+  value: number;
+}
+
+export const Hours: React.FC<Props> = (props) => {
   const classes = useTimeStyles();
-  return <span className={classes.hours}></span>;
+  return (
+    <span
+      style={{ transform: "rotateZ(" + props.value + "deg)" }}
+      className={classes.hours}
+    ></span>
+  );
 };
 
-export const Minutes: React.FC = () => {
+export const Minutes: React.FC<Props> = (props) => {
   const classes = useTimeStyles();
-  return <span className={classes.minutes}></span>;
+  return (
+    <span
+      style={{ transform: "rotateZ(" + props.value + "deg)" }}
+      className={classes.minutes}
+    ></span>
+  );
 };
 
-export const Seconds: React.FC = () => {
+export const Seconds: React.FC<Props> = (props) => {
   const classes = useTimeStyles();
-  return <span className={classes.seconds}></span>;
+  return (
+    <span
+      style={{ transform: "rotateZ(" + props.value + "deg)" }}
+      className={classes.seconds}
+    ></span>
+  );
 };

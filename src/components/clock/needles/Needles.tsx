@@ -1,11 +1,11 @@
 import * as React from "react";
-import { useTimeStyles } from "./Time.style";
+import { useTimeStyles } from "./Needles.style";
 
 interface Props {
   value: number;
 }
 
-export const Hours: React.FC<Props> = (props) => {
+export const NeedleHours: React.FC<Props> = (props) => {
   const classes = useTimeStyles();
   return (
     <span
@@ -15,7 +15,7 @@ export const Hours: React.FC<Props> = (props) => {
   );
 };
 
-export const Minutes: React.FC<Props> = (props) => {
+export const NeedleMinutes: React.FC<Props> = (props) => {
   const classes = useTimeStyles();
   return (
     <span
@@ -25,7 +25,7 @@ export const Minutes: React.FC<Props> = (props) => {
   );
 };
 
-export const Seconds: React.FC<Props> = (props) => {
+export const NeedleSeconds: React.FC<Props> = (props) => {
   const classes = useTimeStyles();
   return (
     <span

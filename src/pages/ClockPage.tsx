@@ -9,22 +9,24 @@ import { StickThree } from "../components/clock/sticks/Sticks";
 import { StickSix } from "../components/clock/sticks/Sticks";
 import { StickNine } from "../components/clock/sticks/Sticks";
 import { Axis } from "../components/clock/sticks/Sticks";
-import { Hours, Minutes, Seconds } from "../components/clock/time/Time";
+import {
+  NeedleHours,
+  NeedleMinutes,
+  NeedleSeconds,
+} from "../components/clock/needles/Needles";
 import { Footer } from "../components/footer/Footer";
 import { updateTimeAction } from "../redux/actions/ClockActions";
 
 export const ClockPage: React.FC = () => {
-
   const dispatch = useDispatch();
 
-  const clockState = useSelector<
-    IApplicationState, 
-    IClockState
-  >((state) => state.clockState);
+  const clockState = useSelector<IApplicationState, IClockState>(
+    (state) => state.clockState
+  );
 
   React.useEffect(() => {
     const id = setInterval(() => {
-      dispatch(updateTimeAction())
+      dispatch(updateTimeAction());
     }, 1000);
     return () => {
       clearInterval(id);
@@ -40,9 +42,9 @@ export const ClockPage: React.FC = () => {
           <StickSix />
           <StickNine />
           <Axis />
-          <Hours value={clockState.hours} />
-          <Minutes value={clockState.minutes} />
-          <Seconds value={clockState.seconds} />
+          <NeedleHours value={clockState.hours} />
+          <NeedleMinutes value={clockState.minutes} />
+          <NeedleSeconds value={clockState.seconds} />
         </Circle>
       </Container>
       <Footer />

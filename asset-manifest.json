@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-analog-clock/static/css/main.b13690c0.chunk.css",
-    "main.js": "/react-analog-clock/static/js/main.a558a8d5.chunk.js",
-    "main.js.map": "/react-analog-clock/static/js/main.a558a8d5.chunk.js.map",
+    "main.js": "/react-analog-clock/static/js/main.dc728a1d.chunk.js",
+    "main.js.map": "/react-analog-clock/static/js/main.dc728a1d.chunk.js.map",
     "runtime-main.js": "/react-analog-clock/static/js/runtime-main.7794975b.js",
     "runtime-main.js.map": "/react-analog-clock/static/js/runtime-main.7794975b.js.map",
     "static/js/2.40b2d3f0.chunk.js": "/react-analog-clock/static/js/2.40b2d3f0.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7794975b.js",
     "static/js/2.40b2d3f0.chunk.js",
     "static/css/main.b13690c0.chunk.css",
-    "static/js/main.a558a8d5.chunk.js"
+    "static/js/main.dc728a1d.chunk.js"
   ]
 }

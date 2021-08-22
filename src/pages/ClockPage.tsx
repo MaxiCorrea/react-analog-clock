@@ -14,15 +14,17 @@ import {
   NeedleMinutes,
   NeedleSeconds,
 } from "../components/clock/needles/Needles";
+import { Time } from "../components/text/time/Time";
 import { Footer } from "../components/footer/Footer";
 import { updateTimeAction } from "../redux/actions/ClockActions";
 
 export const ClockPage: React.FC = () => {
   const dispatch = useDispatch();
 
-  const clockState = useSelector<IApplicationState, IClockState>(
-    (state) => state.clockState
-  );
+  const clockState = useSelector<
+    IApplicationState, 
+    IClockState
+  >((state) => state.clockState);
 
   React.useEffect(() => {
     const id = setInterval(() => {
@@ -47,6 +49,7 @@ export const ClockPage: React.FC = () => {
           <NeedleSeconds value={clockState.seconds} />
         </Circle>
       </Container>
+      <Time {...clockState} />
       <Footer />
     </>
   );
